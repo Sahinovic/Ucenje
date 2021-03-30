@@ -28,7 +28,7 @@ class PrivatIngredientAPI(TestCase):
         self.client=APIClient()
         self.client.force_authenticate(self.user)
 
-    def retrive_ingredient_list(self):
+    def test_retrive_ingredient_list(self):
 
         Ingredient.objects.create(user=self.user, name='brasno')
         Ingredient.objects.create(user = self.user, name = 'kvasac')
